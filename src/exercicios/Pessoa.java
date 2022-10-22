@@ -28,4 +28,9 @@ public class Pessoa {
     public void setIdade(Integer idade) {
         this.idade = idade;
     }
+
+    public void obterInformacoes() {
+        System.out.println(nome);
+        System.out.println(idade);
+    }
 }

@@ -1,7 +1,5 @@
 package application;
 
-package application;
-
 import entities.Account;
 import entities.BusinessAccount;
 import entities.SavingsAccount;
@@ -35,7 +33,7 @@ public class Program {
         bacc.setLoanLimit(200.0);
 
         //NAO ACESSA METODOS CHILD
-        acc1.setLoanLimit(200.0);
+        ((BusinessAccount) acc1).setLoanLimit(200.0);
 
         //continuação de *** UPCASTING ***//
         // como todas as subclasse são também um objeto superclasse interiormente
@@ -47,9 +45,9 @@ public class Program {
 
         //para provar que é possível fazer esse upcasting, vemos que os métodos específicos das subclasses não podem ser chamados
         // NENHUMA DS DUAS ACESSAM OS METODOS CHILD, SE EU PRECISAR, O QUE FAZER? DOWNCASTING!
-        acc2.setLoanLimit(200.0);
+        ((BusinessAccount) acc2).setLoanLimit(200.0);
 
-        acc3.updateBalance();
+        ((SavingsAccount) acc3).updateBalance();
 
         // primeiro exemplo de DOWNCASTING
 
